@@ -9,10 +9,10 @@ using ServiceLayer.Interface;
 
 namespace BuyMyHouse_623434_project
 {
-    public class HouseFunctions
+    public class HouseFunction
     {
         private readonly IHouseService _HouseService;
-        public HouseFunctions(IHouseService houseService)
+        public HouseFunction(IHouseService houseService)
         {
             _HouseService = houseService;
         }

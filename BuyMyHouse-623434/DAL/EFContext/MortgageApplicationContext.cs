@@ -26,7 +26,7 @@ namespace DAL.EFContext
                 .HasNoDiscriminator();
 
             modelBuilder.Entity<MortgageApplication>()
-                .HasPartitionKey(o => o.id);
+                .HasPartitionKey(o => o.ZipCode);
 
             modelBuilder.Entity<MortgageApplication>()
                 .UseETagConcurrency();

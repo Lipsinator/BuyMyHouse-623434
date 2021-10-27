@@ -1,4 +1,6 @@
-﻿using Domain.DBModels;
+﻿using DAL.Interface;
+using DAL.Repository;
+using Domain.DBModels;
 using ServiceLayer.Interface;
 using System;
 using System.Collections.Generic;
@@ -10,9 +12,14 @@ namespace ServiceLayer.Service
 {
     public class MortgageApplicationService : IMortgageApplcationService
     {
-        public Task<MortgageApplication> CreateUserProfile(MortgageApplication mortgageApplication)
+        private readonly IMortgageApplicationRepository _MortgageApplicationRepository;
+        public MortgageApplicationService(IMortgageApplicationRepository mortgageApplicationRepository)
         {
-            throw new NotImplementedException();
+            _MortgageApplicationRepository = mortgageApplicationRepository;
+        }
+        public async Task<MortgageApplication> CreateMortgageApplication(MortgageApplication mortgageApplication)
+        {
+            return await _MortgageApplicationRepository.CreateMortgageApplication(mortgageApplication);
         }
     }
 }

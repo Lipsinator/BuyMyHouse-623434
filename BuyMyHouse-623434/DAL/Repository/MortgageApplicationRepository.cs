@@ -1,4 +1,5 @@
-﻿using DAL.Interface;
+﻿using DAL.EFContext;
+using DAL.Interface;
 using Domain.DBModels;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,18 @@ namespace DAL.Repository
 {
     public class MortgageApplicationRepository : IMortgageApplicationRepository
     {
-        public Task<MortgageApplication> CreateMortgageApplication(MortgageApplication mortgageApplication)
+        private readonly MortgageApplicationContext _MortegageApplcationContext;
+
+        public MortgageApplicationRepository(MortgageApplicationContext mortgageApplicationContext)
         {
-            throw new NotImplementedException();
+            _MortegageApplcationContext = mortgageApplicationContext;
+        }
+        
+        public async Task<MortgageApplication> CreateMortgageApplication(MortgageApplication mortgageApplication)
+        {
+            _MortegageApplcationContext.MortgageApplications.Add(mortgageApplication);
+            _MortegageApplcationContext.SaveChanges();
+            return _MortegageApplcationContext.MortgageApplications.Single(m => m.id == mortgageApplication.id);
         }
     }
 }

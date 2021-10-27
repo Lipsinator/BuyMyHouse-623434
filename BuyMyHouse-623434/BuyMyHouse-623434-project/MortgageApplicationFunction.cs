@@ -29,15 +29,18 @@ namespace BuyMyHouse_623434_project
             try
             {
                 var content = await new StreamReader(req.Body).ReadToEndAsync();
-                var course = JsonConvert.DeserializeObject<MortgageApplication>(content);
-                var response = req.CreateResponse(HttpStatusCode.OK);
-                response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
-                return response;
+                var mortgageApplication = JsonConvert.DeserializeObject<MortgageApplication>(content);
+
+                return await ResponseHelper.BodyResponse(await _MortgageApplicationService.CreateMortgageApplication(mortgageApplication), 
+                    HttpStatusCode.Created, req);
             }
             catch (Exception e)
             {
                 _Logger.LogError("{Error}", e.Message);
-                throw;
+                var response = req.CreateResponse(HttpStatusCode.BadRequest);
+                response.Headers.Add("Content-Type", "text/plain");
+                await response.WriteStringAsync("Oops something went wrong.");
+                return response;
             }
         }
     }

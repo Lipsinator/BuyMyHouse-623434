@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.DBModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace ServiceLayer.Interface
 {
     public interface IMortgageApplcationService
     {
-        Task<MortgageApplication> CreateUserProfile(MortgageApplication mortgageApplication);
+        Task<MortgageApplication> CreateMortgageApplication(MortgageApplication mortgageApplication);
     }
 }

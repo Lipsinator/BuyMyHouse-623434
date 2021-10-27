@@ -15,3 +15,4 @@ C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\DAL\obj\Debu
 C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\DAL\obj\Debug\net5.0\ref\DAL.dll
 C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\DAL\obj\Debug\net5.0\DAL.pdb
 C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\DAL\obj\Debug\net5.0\DAL.genruntimeconfig.cache
+C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\DAL\obj\Debug\net5.0\DAL.csproj.CopyComplete
