@@ -12,26 +12,26 @@ using ServiceLayer.Interface;
 
 namespace BuyMyHouse_623434_project
 {
-    public class MortgageApplicationFunction
+    public class BuyerInfoFunction
     {
-        private readonly IMortgageApplcationService _MortgageApplicationService;
-        private readonly ILogger<MortgageApplication> _Logger;
-        public MortgageApplicationFunction(ILogger<MortgageApplication> logger, IMortgageApplcationService mortgageApplcationService)
+        private readonly IBuyerInfoService _BuyerInfoService;
+        private readonly ILogger<BuyerInfo> _Logger;
+        public BuyerInfoFunction(ILogger<BuyerInfo> logger, IBuyerInfoService buyerInfoService)
         {
             _Logger = logger;
-            _MortgageApplicationService = mortgageApplcationService;
+            _BuyerInfoService = buyerInfoService;
         }
 
-        [Function("CreateMortgageApplcation")]
-        public async Task<HttpResponseData> CreateMortgageApplcation([HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequestData req,
+        [Function("CreateBuyerInfo")]
+        public async Task<HttpResponseData> CreateBuyerInfo([HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequestData req,
             FunctionContext executionContext)
         {
             try
             {
                 var content = await new StreamReader(req.Body).ReadToEndAsync();
-                var mortgageApplication = JsonConvert.DeserializeObject<MortgageApplication>(content);
+                var buyerInfo = JsonConvert.DeserializeObject<BuyerInfo>(content);
 
-                return await ResponseHelper.BodyResponse(await _MortgageApplicationService.CreateMortgageApplication(mortgageApplication), 
+                return await ResponseHelper.BodyResponse(await _BuyerInfoService.CreateBuyerInfo(buyerInfo), 
                     HttpStatusCode.Created, req);
             }
             catch (Exception e)

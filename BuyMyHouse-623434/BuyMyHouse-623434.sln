@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuyMyHouse-623434-project", "BuyMyHouse-623434-project\BuyMyHouse-623434-project.csproj", "{1BB28D69-B215-4429-9381-5DAD524D003D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuyMyHouse-623434-project", "BuyMyHouse-623434-project\BuyMyHouse-623434-project.csproj", "{1BB28D69-B215-4429-9381-5DAD524D003D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{A838B578-1C4A-4CF1-B077-39BC224284F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{A838B578-1C4A-4CF1-B077-39BC224284F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{14F4EC03-E17B-4126-8AF4-77DC8207539C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{14F4EC03-E17B-4126-8AF4-77DC8207539C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{F1B2B5FC-2CD7-4EA7-92CC-310D87525E09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{F1B2B5FC-2CD7-4EA7-92CC-310D87525E09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{E1CEB3D1-E9A8-46E3-A700-69428358C671}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F1B2B5FC-2CD7-4EA7-92CC-310D87525E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1B2B5FC-2CD7-4EA7-92CC-310D87525E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1B2B5FC-2CD7-4EA7-92CC-310D87525E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1CEB3D1-E9A8-46E3-A700-69428358C671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1CEB3D1-E9A8-46E3-A700-69428358C671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1CEB3D1-E9A8-46E3-A700-69428358C671}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1CEB3D1-E9A8-46E3-A700-69428358C671}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

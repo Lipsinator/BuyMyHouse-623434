@@ -10,5 +10,6 @@ namespace DAL.Interface
     public interface IMortgageApplicationRepository
     {
         Task<MortgageApplication> CreateMortgageApplication (MortgageApplication mortgageApplication);
+        Task<IEnumerable<MortgageApplication>> GetAllMortgageApplications();
     }
 }

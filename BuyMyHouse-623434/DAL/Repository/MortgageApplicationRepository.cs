@@ -24,5 +24,10 @@ namespace DAL.Repository
             _MortegageApplcationContext.SaveChanges();
             return _MortegageApplcationContext.MortgageApplications.Single(m => m.id == mortgageApplication.id);
         }
+
+        public async Task<IEnumerable<MortgageApplication>> GetAllMortgageApplications()
+        {
+            return _MortegageApplcationContext.MortgageApplications.ToList();
+        }
     }
 }

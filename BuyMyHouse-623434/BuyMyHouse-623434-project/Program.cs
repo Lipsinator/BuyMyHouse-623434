@@ -1,3 +1,4 @@
+using BuyMyHouse_623434_project.QueueStorage;
 using DAL.EFContext;
 using DAL.Interface;
 using DAL.Repository;
@@ -20,17 +21,16 @@ namespace BuyMyHouse_623434_project
                 {
                     // services
                     services.AddTransient<IHouseService, HouseService>();
-                    services.AddTransient<IMortgageApplcationService, MortgageApplicationService>();
+                    services.AddTransient<IBuyerInfoService, BuyerInfoService>();
 
                     // repos
                     services.AddTransient<IHouseRepository, HouseRepository>();
-                    services.AddTransient<IMortgageApplicationRepository, MortgageApplicationRepository>();
+                    services.AddTransient<IBuyerInfoRepository, BuyerInfoRepository>();
 
 
                     //DBContexts
                     services.AddDbContext<HouseContext>();
-                    services.AddDbContext<MortgageApplicationContext>();
-
+                    services.AddDbContext<BuyerInfoContext>();
 
                     // cosmosdb setup
                     //services.AddSingleton<ICosmosDbService<Message>>(CosmosDbSetup<Message>

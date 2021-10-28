@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace ServiceLayer.Interface
 {
-    public interface IMortgageApplcationService
+    public interface IBuyerInfoService
     {
-        Task<MortgageApplication> CreateMortgageApplication(MortgageApplication mortgageApplication);
+        Task<BuyerInfo> CreateBuyerInfo(BuyerInfo buyerInfo);
+        Task<IEnumerable<BuyerInfo>> GetAllBuyerInfo();
     }
 }
