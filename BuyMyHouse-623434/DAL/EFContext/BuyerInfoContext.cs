@@ -23,6 +23,9 @@ namespace DAL.EFContext
                 .ToContainer("BuyerInfos");
 
             modelBuilder.Entity<BuyerInfo>()
+                .HasKey(b => b.id);
+
+            modelBuilder.Entity<BuyerInfo>()
                 .HasNoDiscriminator();
 
             modelBuilder.Entity<BuyerInfo>()

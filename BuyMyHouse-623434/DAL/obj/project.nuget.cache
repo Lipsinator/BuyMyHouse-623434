@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fytIK/Ep8ef4NQ3idRwQlfoTRpjZ+qGc20WT5GwsnvGFP82YI7a+7/b9/0Oser+IoNagX275UAyuYpFxGZ2u3w==",
+  "dgSpecHash": "PVMP9thaUXnVILhcL+eum6BGOGa1Pc1KUMLvaow+i5S1ukfM83IDvaWeNntJWewebCz5UTwMpMyYWU93qOaSDw==",
   "success": true,
   "projectFilePath": "C:\\Users\\chris\\Documents\\GitHub\\BuyMyHouse-623434\\BuyMyHouse-623434\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
@@ -121,7 +121,8 @@
     "C:\\Users\\chris\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\chris\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\chris\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\chris\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\chris\\.nuget\\packages\\windowsazure.storage\\9.3.3\\windowsazure.storage.9.3.3.nupkg.sha512"
   ],
   "logs": []
 }

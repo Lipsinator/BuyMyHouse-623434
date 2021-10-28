@@ -51,6 +51,10 @@
             "Microsoft.EntityFrameworkCore.Cosmos": {
               "target": "Package",
               "version": "[5.0.11, )"
+            },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.3, )"
             }
           },
           "imports": [
@@ -165,6 +169,9 @@
               },
               "C:\\Users\\chris\\Documents\\GitHub\\BuyMyHouse-623434\\BuyMyHouse-623434\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\chris\\Documents\\GitHub\\BuyMyHouse-623434\\BuyMyHouse-623434\\Domain\\Domain.csproj"
+              },
+              "C:\\Users\\chris\\Documents\\GitHub\\BuyMyHouse-623434\\BuyMyHouse-623434\\Utility\\Utility.csproj": {
+                "projectPath": "C:\\Users\\chris\\Documents\\GitHub\\BuyMyHouse-623434\\BuyMyHouse-623434\\Utility\\Utility.csproj"
               }
             }
           }
@@ -186,6 +193,70 @@
             "Microsoft.EntityFrameworkCore.Cosmos": {
               "target": "Package",
               "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\chris\\Documents\\GitHub\\BuyMyHouse-623434\\BuyMyHouse-623434\\Utility\\Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\chris\\Documents\\GitHub\\BuyMyHouse-623434\\BuyMyHouse-623434\\Utility\\Utility.csproj",
+        "projectName": "Utility",
+        "projectPath": "C:\\Users\\chris\\Documents\\GitHub\\BuyMyHouse-623434\\BuyMyHouse-623434\\Utility\\Utility.csproj",
+        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chris\\Documents\\GitHub\\BuyMyHouse-623434\\BuyMyHouse-623434\\Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\chris\\Documents\\GitHub\\BuyMyHouse-623434\\BuyMyHouse-623434\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\chris\\Documents\\GitHub\\BuyMyHouse-623434\\BuyMyHouse-623434\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.2, )"
             }
           },
           "imports": [

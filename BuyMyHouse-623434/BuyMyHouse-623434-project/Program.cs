@@ -1,5 +1,6 @@
 using BuyMyHouse_623434_project.QueueStorage;
 using DAL.EFContext;
+using DAL.Helpers;
 using DAL.Interface;
 using DAL.Repository;
 using Microsoft.Azure.Functions.Worker.Configuration;
@@ -20,22 +21,14 @@ namespace BuyMyHouse_623434_project
                 .ConfigureServices(services =>
                 {
                     // services
-                    services.AddTransient<IHouseService, HouseService>();
                     services.AddTransient<IBuyerInfoService, BuyerInfoService>();
+                    services.AddTransient<IBlobService, BlobService>();
 
                     // repos
-                    services.AddTransient<IHouseRepository, HouseRepository>();
                     services.AddTransient<IBuyerInfoRepository, BuyerInfoRepository>();
 
-
                     //DBContexts
-                    services.AddDbContext<HouseContext>();
                     services.AddDbContext<BuyerInfoContext>();
-
-                    // cosmosdb setup
-                    //services.AddSingleton<ICosmosDbService<Message>>(CosmosDbSetup<Message>
-                    //   .InitializeMessageCosmosClientInstanceAsync("MessageContainer")
-                    //  .GetAwaiter().GetResult());
                 })
                 .ConfigureFunctionsWorkerDefaults()
                 .Build();

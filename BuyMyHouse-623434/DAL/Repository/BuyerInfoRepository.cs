@@ -17,17 +17,29 @@ namespace DAL.Repository
         {
             _BuyerInfoContext = buyerInfoContext;
         }
-        
+
+        public async Task AddBlobId(BuyerInfo buyerInfo)
+        {
+            _BuyerInfoContext.Update(buyerInfo);
+        }
+
         public async Task<BuyerInfo> CreateBuyerInfo(BuyerInfo buyerInfo)
         {
             _BuyerInfoContext.BuyerInfos.Add(buyerInfo);
             _BuyerInfoContext.SaveChanges();
-            return _BuyerInfoContext.BuyerInfos.Single(b => b.id == buyerInfo.id);
+            return _BuyerInfoContext.BuyerInfos.Find(buyerInfo.id);
         }
 
         public async Task<IEnumerable<BuyerInfo>> GetAllBuyerInfo()
         {
             return _BuyerInfoContext.BuyerInfos.ToList();
         }
+
+        public async Task<BuyerInfo> GetBuyerInfoById(string id)
+        {
+            return _BuyerInfoContext.BuyerInfos.Find(id);
+        }
+
+
     }
 }

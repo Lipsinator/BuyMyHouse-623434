@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Azure.Functions.Worker;
@@ -18,7 +19,7 @@ namespace BuyMyHouse_623434_project.Functions
         }
 
         [Function("ServiceCustomers")]
-        public async Task ServiceCustomers([TimerTrigger("* * * * *")] MyInfo myTimer, FunctionContext context)
+        public async Task ServiceCustomers([TimerTrigger("0 * * * * *")] MyInfo myTimer, FunctionContext context)
         {
             var buyerInfos = await _BuyerInfoService.GetAllBuyerInfo();
 

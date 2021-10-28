@@ -13,8 +13,10 @@ C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\ServiceLayer
 C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\ServiceLayer\obj\Debug\net5.0\ServiceLayer.AssemblyInfoInputs.cache
 C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\ServiceLayer\obj\Debug\net5.0\ServiceLayer.AssemblyInfo.cs
 C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\ServiceLayer\obj\Debug\net5.0\ServiceLayer.csproj.CoreCompileInputs.cache
-C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\ServiceLayer\obj\Debug\net5.0\ServiceLayer.csproj.CopyComplete
 C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\ServiceLayer\obj\Debug\net5.0\ServiceLayer.dll
 C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\ServiceLayer\obj\Debug\net5.0\ref\ServiceLayer.dll
 C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\ServiceLayer\obj\Debug\net5.0\ServiceLayer.pdb
 C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\ServiceLayer\obj\Debug\net5.0\ServiceLayer.genruntimeconfig.cache
+C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\ServiceLayer\bin\Debug\net5.0\Utility.dll
+C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\ServiceLayer\bin\Debug\net5.0\Utility.pdb
+C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\ServiceLayer\obj\Debug\net5.0\ServiceLayer.csproj.CopyComplete
