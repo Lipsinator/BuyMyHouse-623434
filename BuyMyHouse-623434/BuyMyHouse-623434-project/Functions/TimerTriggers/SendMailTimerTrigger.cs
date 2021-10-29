@@ -25,24 +25,19 @@ namespace BuyMyHouse_623434_project.Functions
             _MailService = mailService;
         }
 
-        //[Function("SendMailTimerTrigger")]
-        //public async Task SendMail([TimerTrigger("0 * * * * *")] MyInfo myTimer, FunctionContext context)
-        //{
         [Function("SendMailTimerTrigger")]
-        public async Task<HttpResponse> SendMail(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData req)
+        public async Task SendMail([TimerTrigger("0 0 8 * * *")] MyInfo myTimer, FunctionContext context)
         {
+            // This TimerTrigger sends the emails in the morning to all users who requested a mortgage application.
             var buyerInfos = await _BuyerInfoService.GetAllBuyerInfo();
             
             // Devide the objects into smaller batches so we can use more threads at the same time.
             var batchedBuyerInfo = Batching.CreateBatch(buyerInfos, int.Parse(Environment.GetEnvironmentVariable("BATCH_SIZE")));
 
-            // chunked by N, so N threads are started that each send emails
             foreach (var buyerInfoList in batchedBuyerInfo)
             {
                 var thread = StartSendMailThread(buyerInfoList);
             }
-            return null;
         }
 
         private Thread StartSendMailThread(IEnumerable<BuyerInfo> buyerInfoList)

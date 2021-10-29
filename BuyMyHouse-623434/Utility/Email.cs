@@ -17,9 +17,6 @@ namespace Utility
             var from = new EmailAddress(email, "BuyMyHouse-623434");
             var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
 
-            if (!string.IsNullOrEmpty(b64Content) && !string.IsNullOrEmpty(attachmentName))
-                msg.AddAttachment(attachmentName, b64Content, "application/pdf");
-
             await client.SendEmailAsync(msg);
         }
     }

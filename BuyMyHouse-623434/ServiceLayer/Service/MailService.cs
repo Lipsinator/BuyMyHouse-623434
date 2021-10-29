@@ -31,11 +31,10 @@ namespace ServiceLayer.Service
             foreach (var buyerInfo in buyerInfoList)
             {
                 _Logger.LogInformation($"Sending emails to all users in batched list.");
-                var pdfBA = await _BlobService.GetBlobFromServer(buyerInfo.BlobId);
-                var pdfB64 = Convert.ToBase64String(pdfBA);
+                var pdf = await _BlobService.GetBlobFromServer(buyerInfo.BlobId);
 
-                Email.SendMail(new EmailAddress(buyerInfo.Email), "Your mortgage application", "Your mortgage application",
-                    "Your mortgage application", pdfB64, "Mortgage");
+                Email.SendMail(new EmailAddress(buyerInfo.Email), "Your mortgage application", "Your mortgage application " + pdf,
+                    "Your mortgage application" + pdf);
             }
         }
     }

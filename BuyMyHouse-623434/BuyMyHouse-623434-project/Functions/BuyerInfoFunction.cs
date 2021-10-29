@@ -28,6 +28,7 @@ namespace BuyMyHouse_623434_project
         {
             try
             {
+                // Endpoints to create a BuyerInfo object.
                 var content = await new StreamReader(req.Body).ReadToEndAsync();
                 var buyerInfo = JsonConvert.DeserializeObject<BuyerInfo>(content);
 

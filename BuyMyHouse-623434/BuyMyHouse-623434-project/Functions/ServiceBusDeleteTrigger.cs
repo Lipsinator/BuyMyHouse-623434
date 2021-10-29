@@ -18,16 +18,9 @@ namespace BuyMyHouse_623434_project.Functions
         [Function("ServiceBusDeleteTrigger")]
         public async Task DeleteTrigger([ServiceBusTrigger("deletequeue", Connection = "ServiceBusConnectionString")] string myQueueItem, FunctionContext context)
         {
-            try
-            {
-                var buyerInfoBlobId = JsonConvert.DeserializeObject<string>(myQueueItem);
-                await _BuyerInfoService.DeleteMortage(buyerInfoBlobId);
-            }
-            catch (Exception e)
-            {
-
-                throw;
-            }
+            // This trigger is triggered when the access time of a blob object has passed.
+            var buyerInfoBlobId = JsonConvert.DeserializeObject<string>(myQueueItem);
+            await _BuyerInfoService.DeleteMortage(buyerInfoBlobId);
         }
     }
 }

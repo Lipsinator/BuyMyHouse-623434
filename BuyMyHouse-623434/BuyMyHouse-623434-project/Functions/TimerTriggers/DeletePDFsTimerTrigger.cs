@@ -22,17 +22,13 @@ namespace BuyMyHouse_623434_project.Functions.TimerTriggers
             _Logger = logger;
         }
 
-        [Function("DeletePDFsTimerTrigger")]
-        public async Task<HttpResponse> DeletePDFs(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData req)
-        {
 
-            //[Function("DeletePDFsTimerTrigger")]
-            //public async Task DeletePDFs([TimerTrigger("0 * * * * *")] MyInfo myTimer, FunctionContext context)
-            //{
+        [Function("DeletePDFsTimerTrigger")]
+        public async Task DeletePDFs([TimerTrigger("0 0 22 * * *")] MyInfo myTimer, FunctionContext context)
+        {
+            // 24 hours after creating the mortgageapplications will be deleted on this endpoints.
             await _BuyerInfoService.DeleteBlobIdFromBuyerInfo();
             _Logger.LogInformation("The PDF blobIds for generated mortgages have now been deleted");
-            return null;
         }
     }
 }

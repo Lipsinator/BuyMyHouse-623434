@@ -15,3 +15,4 @@ C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\Utility\obj\
 C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\Utility\obj\Debug\net5.0\ref\Utility.dll
 C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\Utility\obj\Debug\net5.0\Utility.pdb
 C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\Utility\obj\Debug\net5.0\Utility.genruntimeconfig.cache
+C:\Users\chris\Documents\GitHub\BuyMyHouse-623434\BuyMyHouse-623434\Utility\obj\Debug\net5.0\Utility.csproj.CopyComplete

@@ -23,16 +23,12 @@ namespace BuyMyHouse_623434_project.Functions
             _Logger = logger;
         }
 
-        //[Function("ServiceCustomers")]
-        //public async Task ServiceCustomers([TimerTrigger("0 * * * * *")] MyInfo myTimer, FunctionContext context)
-        //{
         [Function("ServiceCustomers")]
-        public async Task<HttpResponse> ServiceCustomers(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData req)
+        public async Task ServiceCustomers([TimerTrigger("0 0 24 * * *")] MyInfo myTimer, FunctionContext context)
         {
+            //This TimerTrigger generates a queue message at night for calculating mortgage.
             await _BuyerInfoService.CreateMortgageApplicationQueue();
             _Logger.LogInformation("Create Mortgageapplication queue messageds have been created");
-            return null;
         }
     }
     public class MyInfo

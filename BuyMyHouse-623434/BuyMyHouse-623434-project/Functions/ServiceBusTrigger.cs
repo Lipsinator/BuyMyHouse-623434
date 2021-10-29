@@ -20,16 +20,9 @@ namespace BuyMyHouse_623434_project.Functions
         [Function("ServiceBusTrigger")]
         public async Task ProcessMortgageApplications([ServiceBusTrigger("mortgageapplications", Connection = "ServiceBusConnectionString")] string myQueueItem, FunctionContext context)
         {
-            try
-            {
-                var buyerInfoId = JsonConvert.DeserializeObject<string>(myQueueItem);
-                await _BuyerInfoService.CreateMortgageApplication(buyerInfoId);
-            }
-            catch (Exception e)
-            {
-
-                throw;
-            }
+            // This trigger is triggered when a mortgageapplication queue item is requested and will calculate the mortgage.
+            var buyerInfoId = JsonConvert.DeserializeObject<string>(myQueueItem);
+            await _BuyerInfoService.CreateMortgageApplication(buyerInfoId);           
         }
     }
 }
