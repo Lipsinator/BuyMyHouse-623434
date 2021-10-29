@@ -13,5 +13,8 @@ namespace ServiceLayer.Interface
         Task<IEnumerable<BuyerInfo>> GetAllBuyerInfo();
         Task<BuyerInfo> GetBuyerInfoById(string id);
         Task CreateMortgageApplication(string queueMessage);
+        Task DeleteMortage(string buyerInfoBlobId);
+        Task CreateMortgageApplicationQueue();
+        Task DeleteBlobIdFromBuyerInfo();
     }
 }

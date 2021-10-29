@@ -44,7 +44,7 @@ namespace DAL.Helpers
         public async Task<byte[]> GetBlobFromServer(string fileName)
         {
             var containerClient = await GetContainerClient();
-            var blob = containerClient.GetBlockBlobReference($"{fileName}" + ".pdf");
+            var blob = containerClient.GetBlockBlobReference($"{fileName}");
             byte[] result;
 
             // open the cloud blob

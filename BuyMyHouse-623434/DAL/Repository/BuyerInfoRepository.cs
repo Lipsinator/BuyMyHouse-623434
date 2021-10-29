@@ -18,9 +18,10 @@ namespace DAL.Repository
             _BuyerInfoContext = buyerInfoContext;
         }
 
-        public async Task AddBlobId(BuyerInfo buyerInfo)
+        public async Task UpdateBuyerInfo(BuyerInfo buyerInfo)
         {
             _BuyerInfoContext.Update(buyerInfo);
+            _BuyerInfoContext.SaveChanges();
         }
 
         public async Task<BuyerInfo> CreateBuyerInfo(BuyerInfo buyerInfo)

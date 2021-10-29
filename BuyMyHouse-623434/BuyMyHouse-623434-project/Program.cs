@@ -1,4 +1,3 @@
-using BuyMyHouse_623434_project.QueueStorage;
 using DAL.EFContext;
 using DAL.Helpers;
 using DAL.Interface;
@@ -23,6 +22,7 @@ namespace BuyMyHouse_623434_project
                     // services
                     services.AddTransient<IBuyerInfoService, BuyerInfoService>();
                     services.AddTransient<IBlobService, BlobService>();
+                    services.AddTransient<IMailService, MailService>();
 
                     // repos
                     services.AddTransient<IBuyerInfoRepository, BuyerInfoRepository>();

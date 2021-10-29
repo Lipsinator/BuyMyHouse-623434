@@ -12,6 +12,6 @@ namespace DAL.Interface
         Task<BuyerInfo> CreateBuyerInfo (BuyerInfo buyerInfo);
         Task<IEnumerable<BuyerInfo>> GetAllBuyerInfo();
         Task<BuyerInfo> GetBuyerInfoById(string id);
-        Task AddBlobId(BuyerInfo buyerInfo);
+        Task UpdateBuyerInfo(BuyerInfo buyerInfo);
     }
 }

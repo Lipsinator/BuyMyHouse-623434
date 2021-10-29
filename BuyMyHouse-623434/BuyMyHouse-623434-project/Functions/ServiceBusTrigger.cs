@@ -24,8 +24,6 @@ namespace BuyMyHouse_623434_project.Functions
             {
                 var buyerInfoId = JsonConvert.DeserializeObject<string>(myQueueItem);
                 await _BuyerInfoService.CreateMortgageApplication(buyerInfoId);
-                var logger = context.GetLogger("ServiceBusTrigger");
-                logger.LogInformation($"C# ServiceBus queue trigger function processed message: {myQueueItem}");
             }
             catch (Exception e)
             {

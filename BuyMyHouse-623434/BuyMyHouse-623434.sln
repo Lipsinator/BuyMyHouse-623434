@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLayer", "ServiceLaye
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{F1B2B5FC-2CD7-4EA7-92CC-310D87525E09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{E1CEB3D1-E9A8-46E3-A700-69428358C671}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utility", "Utility\Utility.csproj", "{E1CEB3D1-E9A8-46E3-A700-69428358C671}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
